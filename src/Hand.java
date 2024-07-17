@@ -1,4 +1,5 @@
 package src;
+import java.util.Random;
 
 public interface Hand {
 
@@ -13,6 +14,7 @@ public interface Hand {
      　　　　1 : 自身が引数で指定した手より強い
 
      */
+
 
     public int compare(Hand hand);
 

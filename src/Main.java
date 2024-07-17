@@ -1,9 +1,11 @@
 package src;
 import java.io.*;
+
+
 public class Main {
 
 
-    
+    private static int result;
 
     public static void main(String[] args) {
 
@@ -43,21 +45,60 @@ public class Main {
             System.exit(0);
             return;
         }
-        //comの手を生成
 
-        com.createRandomHand();
 
 //        //以降にテストコードを追加して検証を行う
-
 //        System.out.println("ランダムなジャンケンの手をCPUにセットする");
-
 //        System.out.println(com.getHand().getHandName());
-
-
 
         //勝敗決定
         //int result = game.judge(user, com);
 
+        //以降にテストコードを追加して検証を行う
+        //結果表示
+
+        //あなたの手:グー
+
+        //相手の手:パー
+
+        //結果:あなたの負け
+
+        System.out.println(
+
+                user.getPlayerName() + "の手:" + user.getHand().getHandName()
+
+        );
+
+        System.out.println(
+
+                com.getPlayerName() + "の手:" + com.getHand().getHandName()
+
+        );
+
+
+        if (result < 0) {
+
+            System.out.println("結果:" + user.getPlayerName() + "の負け");
+
+        } else if (result > 0) {
+
+            System.out.println("結果:" + user.getPlayerName() + "の勝ち");
+
+        } else {
+
+            System.out.println("結果:あいこ");
+
+        }
+
+
+
     }
 
-}
+
+
+    }
+
+
+
+
+    
