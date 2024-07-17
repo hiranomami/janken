@@ -16,6 +16,7 @@ public class Player {
 
         this.playerName = playerName;
 
+
     }
 
 
@@ -60,6 +61,48 @@ public class Player {
 
 
 
+
+    }
+
+
+
+    /**
+
+     手の強弱を比較する。
+
+     返り値 -1 : 自身が引数で指定した手より弱い
+
+     　　　　0 : 自身が引数で指定した手と同じ
+
+     　　　　1 : 自身が引数で指定した手より強い
+
+     */
+
+    public void createRandomHand() {
+
+
+
+        Random random = new Random();
+
+        int randomValue = random.nextInt(3);
+
+
+
+        if(randomValue == 0) {
+
+            this.hand = new Gu();
+
+        } else if(randomValue == 1) {
+
+            this.hand = new Choki();
+
+        } else {
+
+            this.hand = new Pa();
+
+        }
+
+    
     public String getPlayerName() {
 
         return this.playerName;
@@ -88,11 +131,10 @@ public class Player {
 
         this.hand = hand;
 
+
+   }
+
+
     }
 
-<<<<<<< HEAD
-    public void createRandomHand() {
-    }
-=======
->>>>>>> 2b21d2aade39422269b03a2265672d1ad8ee0019
 }
